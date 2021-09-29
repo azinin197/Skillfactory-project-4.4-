@@ -1,0 +1,15 @@
+{% extends 'flatpages/default.html' %}
+
+{% load my_filters %}
+
+<!-- Название у нас будет proudcts -->
+{% block title %}
+Post
+{% endblock title %}
+
+<!-- В контенте на странице мы выводим сам товар, ID которого было передано в адрес -->
+{% block content %}
+<h3>{{post.title}}</h3>
+<h4>{{ post.time_wr|date:'d M Y'}}</h4>
+<h12>{{post.post_text|censor}}</h12>
+{% endblock content %}
